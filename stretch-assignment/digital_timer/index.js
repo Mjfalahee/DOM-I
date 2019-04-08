@@ -19,44 +19,64 @@ let tens = 0;
 let ones = 0;
 let mshundreds = 0;
 let mstens = 0;
- window.setInterval(function () {
+let tenscount = window.setInterval(function () {
      tens++;
     Tens.textContent = tens;
+    if (tens > 0)
+    {
+        counter.style.color = 'red';
+        // Tens.style.color = 'red';
+        clearInterval(tenscount);
+    }
  }, 10000);
 let Ones = document.getElementById('secondOnes');
   //Ones.style.color = 'red';
-window.setInterval(function() {
+let onescount = window.setInterval(function() {
     ones++;
     if (ones > 9)
      {
         ones = 0;
      }
     Ones.textContent = ones;
+    if (tens > 0)
+    {
+        // Ones.style.color = 'red';
+        clearInterval(onescount);
+    }
     
  },1000);
 
 let msHundreds = document.getElementById('msHundreds');
   //msHundreds.style.color = 'green';
-window.setInterval(function() {
+let mshuncount = window.setInterval(function() {
     mshundreds++;
     if (mshundreds > 9)
     {
         mshundreds = 0;
     }
     msHundreds.textContent = mshundreds;
-    
+    if (tens > 0)
+    {
+        // msHundreds.style.color = 'red';
+        clearInterval(mshuncount);
+    }
 }, 100);
 
 let msTens = document.getElementById('msTens');
  // msTens.style.color = 'orange';
 
- msTens.textContent = mstens;
- window.setInterval(function() {
+msTens.textContent = mstens;
+let mstenscount = window.setInterval(function() {
     mstens++;
     if (mstens > 9)
     {
         mstens = 0;
     }
     msTens.textContent = mstens;
-    
+    if (tens > 0)
+    {
+        // msTens.style.color = 'red';
+        clearInterval(mstenscount);
+    }
 }, 10);
+
