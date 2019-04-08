@@ -93,3 +93,17 @@ paragraphs[5].innerHTML = '123 Way 456 Street </br> Somewhere, USA';
 paragraphs[6].textContent = '1 (888) 888-8888';
 paragraphs[7].textContent = 'sales@greatidea.io';
 paragraphs[8].textContent = 'Copyright Great Idea! 2018';
+
+let textytext = document.getElementsByClassName('text-content');
+textytext[0].style.color = 'red';
+textytext[1].style.color = 'blue';
+textytext[2].style.color = 'orange';
+textytext[3].style.color = 'teal';
+textytext[4].style.color = 'magenta';
+
+let textyundertext = document.getElementsByTagName('p');
+textyundertext[0].style.color = 'blue';
+textyundertext[1].style.color = 'red';
+textyundertext[2].style.color = 'teal';
+textyundertext[3].style.color = 'magenta';
+textyundertext[4].style.color = 'orange';
