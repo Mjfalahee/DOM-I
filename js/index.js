@@ -39,4 +39,88 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navigation = document.querySelector('nav');
+
+let links = navigation.getElementsByTagName('a');
+
+navigation.append('Yes');
+navigation.prepend('No');
+
+navigation.style.color = 'green';
+links[0].textContent = 'Services';
+links[0].style.color = 'green';
+links[1].textContent = 'Product';
+links[1].style.color = 'green';
+links[2].textContent = 'Vision';
+links[2].style.color = 'green';
+links[3].textContent = 'Features';
+links[3].style.color = 'green';
+links[4].textContent = 'About';
+links[4].style.color = 'green';
+links[5].textContent = 'Contact';
+links[5].style.color = 'green';
+
+
+let topimg = document.getElementById('cta-img');
+topimg.setAttribute('src', siteContent[`cta`][`img-src`]);
+
+let midimg = document.getElementById('middle-img');
+midimg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+let toptext = document.querySelector(`h1`);
+toptext.innerHTML = 'DOM<br> Is<br> Awesome';
+
+let topbutton = document.querySelector('button');
+topbutton.textContent = `Get Started`;
+
+
+let middleheads = document.querySelectorAll('h4');
+middleheads[0].textContent = 'Features';
+middleheads[1].textContent = 'About';
+middleheads[2].textContent = 'Services';
+middleheads[3].textContent = 'Product';
+middleheads[4].textContent = 'Vision';
+middleheads[5].textContent = 'Contact';
+
+let paragraphs = document.querySelectorAll('p');
+paragraphs[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+paragraphs[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+paragraphs[5].innerHTML = '123 Way 456 Street </br> Somewhere, USA';
+paragraphs[6].textContent = '1 (888) 888-8888';
+paragraphs[7].textContent = 'sales@greatidea.io';
+paragraphs[8].textContent = 'Copyright Great Idea! 2018';
+
+// let textytext = document.getElementsByClassName('text-content');
+// textytext[0].style.color = 'red';
+// textytext[1].style.color = 'blue';
+// textytext[2].style.color = 'orange';
+// textytext[3].style.color = 'teal';
+// textytext[4].style.color = 'magenta';
+
+// let textyundertext = document.getElementsByTagName('p');
+// textyundertext[0].style.color = 'blue';
+// textyundertext[1].style.color = 'red';
+// textyundertext[2].style.color = 'teal';
+// textyundertext[3].style.color = 'magenta';
+// textyundertext[4].style.color = 'orange';
+
+topbutton.addEventListener('click', function() {
+let textytext = document.getElementsByClassName('text-content');
+textytext[0].style.color = 'red';
+textytext[1].style.color = 'blue';
+textytext[2].style.color = 'orange';
+textytext[3].style.color = 'teal';
+textytext[4].style.color = 'magenta';
+
+let textyundertext = document.getElementsByTagName('p');
+textyundertext[0].style.color = 'blue';
+textyundertext[1].style.color = 'red';
+textyundertext[2].style.color = 'teal';
+textyundertext[3].style.color = 'magenta';
+textyundertext[4].style.color = 'orange';
+});
